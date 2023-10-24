@@ -1,0 +1,304 @@
+:root {
+    --color-primary1: #006640;
+    --color-primary2: #00FFB2;
+    --color-primary3: #148E72;
+    --color-disabled: #D8E4DD;
+    --height-inputs: 25px;
+    --font-size-titulo: 20px;
+    --font-size-inputs: 13px;
+}
+
+// FONTS LATO
+@font-face {
+    font-family: "Lato";
+    src: url("../assets/fonts/Lato-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    color: #3C3F39;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+}
+
+// GENERALES
+.col-form-label-sm {
+    padding-top: 0;
+}
+
+.boton-primary {
+    font-size: 12px;
+    background-color: var(--color-primary2);
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-secundary {
+    font-size: 12px;
+    background-color: #fff;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--color-primary3);
+    color: var(--color-primary3);
+    cursor: pointer;
+
+    i {
+        margin-right: 5px;
+        color: var(--color-primary1);
+    }
+}
+
+/* LAYOUT */
+.layout-main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-areas:
+        'menu header'
+        'menu main';
+
+    &-header {
+        grid-area: header;
+        height: 50px;
+        border-bottom: 1px solid var(--color-primary1);
+    }
+
+    &-aside {
+        grid-area: menu;
+        background-color: var(--color-primary1);
+        height: 100%;
+    }
+
+    &-main {
+        grid-area: main;
+        background-color: #fff;
+        min-height: calc(100vh - 50px);
+        padding: 1rem 1rem;
+    }
+}
+
+// TEMPLATE FORM
+.templateForm {
+    & .boton-secundary {
+        height: var(--height-inputs);
+    }
+
+    // TITULO
+    &-titulo {
+        font-size: var(--font-size-titulo);
+        margin: 0;
+        margin-bottom: 1.5rem;
+        padding: 0 16px;
+    }
+
+    // TABS
+    &-contentTabs {
+        &-header {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--color-primary2);
+
+            &-titulo {
+                margin: 0;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 0.5rem 1rem;
+                color: var(--color-primary3);
+                font-weight: 600;
+
+                i {
+                    margin-right: 10px;
+                    color: var(--color-primary1);
+                }
+            }
+
+            &-titulo.active {
+                border-bottom: 3px solid var(--color-primary3);
+            }
+        }
+
+        &-body {
+
+            [data-content] {
+                display: none;
+            }
+
+            .active[data-content] {
+                display: block;
+            }
+
+        }
+    }
+
+    // FORMULARIO
+    &-form {
+        border-bottom: 1px solid var(--color-primary2);
+
+        &-subtitulo {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: 3px solid var(--color-primary2);
+            padding: 20px 16px;
+
+            button {
+                margin-left: 3rem;
+            }
+        }
+
+        &-data {
+            padding: 18px 16px;
+
+            &-row {
+                margin-bottom: 1rem;
+            }
+
+            &-row:last-child {
+                margin-bottom: 0;
+            }
+
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                label {
+                    font-size: var(--font-size-inputs);
+                    line-height: 1.1;
+                }
+
+                input[type=text] {
+                    font-size: var(--font-size-inputs);
+                    height: var(--height-inputs);
+                    outline: none;
+
+                    &::placeholder {
+                        font-size: calc(var(--font-size-inputs) - 1px);
+                    }
+
+                    &.input-info {
+                        &:disabled {
+                            background-color: #fff;
+                            border: none;
+                        }
+                    }
+
+                    &:disabled {
+                        background-color: var(--color-disabled);
+                    }
+                }
+
+                input[type=date] {
+                    font-size: var(--font-size-inputs);
+                    height: var(--height-inputs);
+                }
+
+                input[type=radio] {
+                    margin-right: 5px;
+                }
+
+                select {
+                    height: var(--height-inputs);
+                    font-size: var(--font-size-inputs);
+                }
+            }
+        }
+
+        &-tabla {
+            table {
+                border-collapse: collapse;
+
+                thead {
+
+                    tr {
+                        th {
+                            text-align: left;
+                            font-size: 12px;
+                            padding: 0.5rem 0.25rem;
+                            width: inherit;
+
+                            input {
+                                width: 100%;
+                            }
+
+                            i {
+                                cursor: pointer;
+                                color: var(--color-primary1);
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+
+                    tr:nth-child(1) {
+                        border-bottom: 3px solid var(--color-primary2);
+                    }
+
+                    tr:nth-child(2) {
+                        border-bottom: 1px solid #ECF0EC;
+
+                        th {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        border-bottom: 1px solid #ECF0EC;
+
+                        td {
+                            font-size: 12px;
+                            padding: 0.5rem 0.25rem;
+
+                            i {
+                                cursor: pointer;
+                                color: var(--color-primary1);
+                                margin-right: 5px;
+                            }
+
+                            &>.estado {
+                                display: inline-block;
+                                text-align: center;
+                                color: #fff;
+                                background-color: #000;
+                                padding: 3px 12px;
+                                border-radius: 50px;
+                                font-size: 11px;
+                                width: calc(100% - 1rem);
+
+                                &-media {
+                                    background-color: #0059A9;
+                                }
+
+                                &-alta {
+                                    background-color: #C60000;
+                                }
+
+                                &-baja {
+                                    background-color: #006540;
+                                }
+                            }
+                        }
+                    }
+
+                    tr:nth-child(2n-1) {
+                        background-color: #F3FFF6;
+                    }
+                }
+            }
+        }
+    }
+}
+

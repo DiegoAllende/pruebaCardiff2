@@ -1,0 +1,236 @@
+:root {
+  --color-primary1: #006640;
+  --color-primary2: #00FFB2;
+  --color-primary3: #148E72;
+  --color-disabled: #D8E4DD;
+  --height-inputs: 25px;
+  --font-size-titulo: 20px;
+  --font-size-inputs: 13px;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  color: #3C3F39;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+
+.col-form-label-sm {
+  padding-top: 0;
+}
+
+.boton-primary {
+  font-size: 12px;
+  background-color: var(--color-primary2);
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-secundary {
+  font-size: 12px;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--color-primary3);
+  color: var(--color-primary3);
+  cursor: pointer;
+}
+.boton-secundary i {
+  margin-right: 5px;
+  color: var(--color-primary1);
+}
+
+/* LAYOUT */
+.layout-main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-areas: "menu header" "menu main";
+}
+.layout-main-header {
+  grid-area: header;
+  height: 50px;
+  border-bottom: 1px solid var(--color-primary1);
+}
+.layout-main-aside {
+  grid-area: menu;
+  background-color: var(--color-primary1);
+  height: 100%;
+}
+.layout-main-main {
+  grid-area: main;
+  background-color: #fff;
+  min-height: calc(100vh - 50px);
+  padding: 1rem 1rem;
+}
+
+.templateForm .boton-secundary {
+  height: var(--height-inputs);
+}
+.templateForm-titulo {
+  font-size: var(--font-size-titulo);
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0 16px;
+}
+.templateForm-contentTabs-header {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-primary2);
+}
+.templateForm-contentTabs-header-titulo {
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  color: var(--color-primary3);
+  font-weight: 600;
+}
+.templateForm-contentTabs-header-titulo i {
+  margin-right: 10px;
+  color: var(--color-primary1);
+}
+.templateForm-contentTabs-header-titulo.active {
+  border-bottom: 3px solid var(--color-primary3);
+}
+.templateForm-contentTabs-body [data-content] {
+  display: none;
+}
+.templateForm-contentTabs-body .active[data-content] {
+  display: block;
+}
+.templateForm-form {
+  border-bottom: 1px solid var(--color-primary2);
+}
+.templateForm-form-subtitulo {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 3px solid var(--color-primary2);
+  padding: 20px 16px;
+}
+.templateForm-form-subtitulo button {
+  margin-left: 3rem;
+}
+.templateForm-form-data {
+  padding: 18px 16px;
+}
+.templateForm-form-data-row {
+  margin-bottom: 1rem;
+}
+.templateForm-form-data-row:last-child {
+  margin-bottom: 0;
+}
+.templateForm-form-data .formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.templateForm-form-data .formGroup label {
+  font-size: var(--font-size-inputs);
+  line-height: 1.1;
+}
+.templateForm-form-data .formGroup input[type=text] {
+  font-size: var(--font-size-inputs);
+  height: var(--height-inputs);
+  outline: none;
+}
+.templateForm-form-data .formGroup input[type=text]::placeholder {
+  font-size: calc(var(--font-size-inputs) - 1px);
+}
+.templateForm-form-data .formGroup input[type=text].input-info:disabled {
+  background-color: #fff;
+  border: none;
+}
+.templateForm-form-data .formGroup input[type=text]:disabled {
+  background-color: var(--color-disabled);
+}
+.templateForm-form-data .formGroup input[type=date] {
+  font-size: var(--font-size-inputs);
+  height: var(--height-inputs);
+}
+.templateForm-form-data .formGroup input[type=radio] {
+  margin-right: 5px;
+}
+.templateForm-form-data .formGroup select {
+  height: var(--height-inputs);
+  font-size: var(--font-size-inputs);
+}
+.templateForm-form-tabla table {
+  border-collapse: collapse;
+}
+.templateForm-form-tabla table thead tr th {
+  text-align: left;
+  font-size: 12px;
+  padding: 0.5rem 0.25rem;
+  width: inherit;
+}
+.templateForm-form-tabla table thead tr th input {
+  width: 100%;
+}
+.templateForm-form-tabla table thead tr th i {
+  cursor: pointer;
+  color: var(--color-primary1);
+  margin-left: 5px;
+}
+.templateForm-form-tabla table thead tr:nth-child(1) {
+  border-bottom: 3px solid var(--color-primary2);
+}
+.templateForm-form-tabla table thead tr:nth-child(2) {
+  border-bottom: 1px solid #ECF0EC;
+}
+.templateForm-form-tabla table thead tr:nth-child(2) th {
+  margin: 10px 0;
+}
+.templateForm-form-tabla table tbody tr {
+  border-bottom: 1px solid #ECF0EC;
+}
+.templateForm-form-tabla table tbody tr td {
+  font-size: 12px;
+  padding: 0.5rem 0.25rem;
+}
+.templateForm-form-tabla table tbody tr td i {
+  cursor: pointer;
+  color: var(--color-primary1);
+  margin-right: 5px;
+}
+.templateForm-form-tabla table tbody tr td > .estado {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  width: calc(100% - 1rem);
+}
+.templateForm-form-tabla table tbody tr td > .estado-media {
+  background-color: #0059A9;
+}
+.templateForm-form-tabla table tbody tr td > .estado-alta {
+  background-color: #C60000;
+}
+.templateForm-form-tabla table tbody tr td > .estado-baja {
+  background-color: #006540;
+}
+.templateForm-form-tabla table tbody tr:nth-child(2n-1) {
+  background-color: #F3FFF6;
+}
+
+/*# sourceMappingURL=style.css.map */

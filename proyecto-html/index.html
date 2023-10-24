@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+    <title>Formularios</title>
+</head>
+
+<body>
+    <div class="layout-main">
+        <header class="layout-main-header"></header>
+        <aside class="layout-main-aside"></aside>
+        <main class="layout-main-main">
+            <!-- GESTION DIA DIA -->
+            <section class="gestionDia">    <!-- COMPONENTE -->
+                <section class="templateForm">
+                    <h1 class="templateForm-titulo">Gestión del Día a Día</h1>
+                    <div class="templateForm-contentTabs">
+                        <div class="templateForm-contentTabs-header">
+                            <p data-target="#gestion" class="templateForm-contentTabs-header-titulo">
+                                <i class="fa-solid fa-note-sticky"></i>
+                                Gestión de compromisos
+                            </p>
+                            <p data-target="#ingreso" class="templateForm-contentTabs-header-titulo active">
+                                <i class="fa-solid fa-table-list"></i>
+                                Ingreso de compromiso
+                            </p>
+                        </div>
+                        <div class="templateForm-contentTabs-body">
+                            <div data-content id="gestion" class="">
+                                <!-- FORMULARIO DE GESTION -->
+                                <h2>Gestion</h2>
+                            </div>
+                            <div data-content id="ingreso" class="active">
+                                <section class="ingreso">   <!-- COMPONENTE -->
+                                    <!-- FORMULARIO DE INGRESOS -->
+                                    <section class="templateForm-form">
+                                        <h2 class="templateForm-form-subtitulo">Ingreso de compromisos</h2>
+                                        <section class="templateForm-form-data">
+                                            <section class="row">
+                                                <div class="col-5">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Asunto</label>
+                                                        <input type="text" placeholder="Ingresa el asunto">
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="formGroup column-2">
+                                                        <label for="asunto">Clase de compromiso</label>
+                                                        <select>
+                                                            <option value="0">- Seleccione -</option>
+                                                            <option value="1">Opcion1</option>
+                                                            <option value="2">Opcion2</option>
+                                                            <option value="3">Opcion3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="formGroup column-2">
+                                                        <label for="asunto">Creado por</label>
+                                                        <input type="text" class="input-info" disabled value="Nombres y Apellidos">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="formGroup column-2">
+                                                        <label for="asunto">Creado por</label>
+                                                        <input type="text" class="input-info" disabled value="DD/MM/AA - HH:MM:SS">
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </section>
+    
+                                    </section>
+    
+                                    <section class="templateForm-form">
+                                        <h2 class="templateForm-form-subtitulo">Datos de la sesión / Reunión</h2>
+                                        <section class="templateForm-form-data">
+                                            <section class="row templateForm-form-data-row">
+                                                <div class="col-2">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Fecha</label>
+                                                        <input type="date">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Anexo</label>
+                                                        <button class="boton-secundary"><i class="fa-solid fa-file"></i>Elegir archivos</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Nombre del archivo</label>
+                                                        <input type="text" disabled value="Documento anexo para la reunión.pdf (210k)">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Número de acta</label>
+                                                        <input type="text" placeholder="Ingresa el N° de acta">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2"></div>
+                                            </section>
+                                            <section class="row formMain-row">
+                                                <div class="col-3">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Área</label>
+                                                        <div>
+                                                            <input type="radio" name="radioArea"><label>Todas las áreas</label>
+                                                            <input type="radio" name="radioArea" style="margin-left: 12px;"><label>Elegir</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">&nbsp;</label>
+                                                        <select>
+                                                            <option value="0">- Seleccione el Área -</option>
+                                                            <option value="1">Opcion1</option>
+                                                            <option value="2">Opcion2</option>
+                                                            <option value="3">Opcion3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="formGroup">
+                                                        <label for="asunto">Responsable general</label>
+                                                        <select>
+                                                            <option value="0">- Seleccione -</option>
+                                                            <option value="1">Opcion1</option>
+                                                            <option value="2">Opcion2</option>
+                                                            <option value="3">Opcion3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div style="text-align: center;">
+                                                        <button class="boton-primary">Guardar temporalmente</button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </section>
+                                    </section>
+    
+                                    <section class="templateForm-form">
+                                        <h2 class="templateForm-form-subtitulo">
+                                            Tareas / Planes de acción
+                                            <button class="boton-secundary"><i class="fa-regular fa-paste"></i>Insertar tarea</button>
+                                        </h2>
+                                        <section class="templateForm-form-tabla">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 25px;"><input type="checkbox"></th>
+                                                        <th style="width: 100px;">Acciones<i class="fa-solid fa-sort"></i></th>
+                                                        <th style="width: 50px;">Cód<i class="fa-solid fa-sort"></i></th>
+                                                        <th style="width: 80px;">Prioridad<i class="fa-solid fa-sort"></i></th>
+                                                        <th>Descripción<i class="fa-solid fa-sort"></i></th>
+                                                        <th>Responsable<i class="fa-solid fa-sort"></i></th>
+                                                        <th>F. compromiso<i class="fa-solid fa-sort"></i></th>
+                                                        <th>Asignado por<i class="fa-solid fa-sort"></i></th>
+                                                        <th>F. Creación<i class="fa-solid fa-sort"></i></th>
+                                                        <th>H. Limite<i class="fa-solid fa-sort"></i></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                        <th><input type="text" placeholder="Buscar"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>
+                                                            <i class="fa-solid fa-pen"></i>
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                            <i class="fa-solid fa-lock"></i>
+                                                        </td>
+                                                        <td>860</td>
+                                                        <td><span class="estado estado-media">Media</span></td>
+                                                        <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables</td>
+                                                        <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                                        <td>2023-10-06 15:35</td>
+                                                        <td>Nelly Colmenares</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>
+                                                            <i class="fa-solid fa-pen"></i>
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                            <i class="fa-solid fa-lock"></i>
+                                                        </td>
+                                                        <td>860</td>
+                                                        <td><span class="estado estado-baja">Baja</span></td>
+                                                        <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables</td>
+                                                        <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                                        <td>2023-10-06 15:35</td>
+                                                        <td>Nelly Colmenares</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>
+                                                            <i class="fa-solid fa-pen"></i>
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                            <i class="fa-solid fa-lock"></i>
+                                                        </td>
+                                                        <td>860</td>
+                                                        <td><span class="estado estado-alta">Alta</span></td>
+                                                        <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables</td>
+                                                        <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                                        <td>2023-10-06 15:35</td>
+                                                        <td>Nelly Colmenares</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>
+                                                            <i class="fa-solid fa-pen"></i>
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            <i class="fa-solid fa-eye"></i>
+                                                            <i class="fa-solid fa-lock"></i>
+                                                        </td>
+                                                        <td>860</td>
+                                                        <td><span class="estado estado-media">Media</span></td>
+                                                        <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables</td>
+                                                        <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                                        <td>2023-10-06 15:35</td>
+                                                        <td>Nelly Colmenares</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                        <td>2023-10-05 18:07</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </section>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+
+
+<!-- <section class="row formMain">
+                                        <div class="col-5">
+                                            <label class="col-form-label-sm">Asunto</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Ingresa el asunto">
+                                        </div>
+                                        <div class="col-3">
+                                            <label class="col-form-label-sm">Clase de compromiso</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Ingresa el asunto">
+                                        </div>
+                                        <div class="col-2">
+                                            <label class="col-form-label-sm">Creado por</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Ingresa el asunto">
+                                        </div>
+                                        <div class="col-2">
+                                            <label class="col-form-label-sm">Creado por</label>
+                                            <input type="text" class="form-control form-control-sm"
+                                                placeholder="Ingresa el asunto">
+                                        </div>
+                                    </section> -->
