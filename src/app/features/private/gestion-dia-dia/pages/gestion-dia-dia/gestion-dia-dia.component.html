@@ -1,0 +1,326 @@
+<section class="gestioDia">
+    <h1>Gestión del Día a Día</h1>
+
+    <p-tabView styleClass="tabview-custom">
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <i class="pi pi-user"></i>
+                <span class="titulo">Gestión de compromisos</span>
+            </ng-template>
+            <section class="templateForm">
+                <section class="templateForm-form">
+                    <h2 class="templateForm-form-subtitulo">Gestión de compromisos</h2>
+                    <section class="templateForm-form-data">
+                        <section class="row">
+                            <div class="formGroup col-md-5 col-sm-6">
+                                <label for="asunto">Asunto</label>
+                                <input pInputText type="text" placeholder="Ingresa el asunto">
+                            </div>
+                            <div class="formGroup col-md-3 col-sm-6">
+                                <label for="asunto">Clase de compromiso</label>
+                                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                    optionLabel="name"></p-dropdown>
+                            </div>
+                            <div class="formGroup col-md-2 col-sm-6">
+                                <label for="asunto">Creado por</label>
+                                <input pInputText type="text" class="input-info" disabled value="Nombres y Apellidos">
+                            </div>
+                            <div class="formGroup col-md-2 col-sm-6">
+                                <label for="asunto">Creado por</label>
+                                <input pInputText type="text" class="input-info" disabled value="DD/MM/AA - HH:MM:SS">
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section class="templateForm-form">
+                    <h2 class="templateForm-form-subtitulo">Datos de la sesión / Reunión</h2>
+                    <section class="templateForm-form-data">
+                        <section class="row">
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Fecha</label>
+                                    <p-calendar [showIcon]="true" dateFormat="dd/mm/yy"
+                                        [readonlyInput]="true"></p-calendar>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Anexo</label>
+                                    <button class="boton-secundary"><i class="fa-solid fa-file"></i>Elegir
+                                        archivos</button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="formGroup">
+                                    <label for="asunto">Nombre del archivo</label>
+                                    <input pInputText type="text" disabled
+                                        value="Documento anexo para la reunión.pdf (210k)">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Número de acta</label>
+                                    <input pInputText type="text" placeholder="Ingresa el N° de acta">
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </section>
+                        <section class="row formMain-row">
+                            <div class="col-3">
+                                <div class="formGroup">
+                                    <label for="asunto">Área</label>
+                                    <div class="formGroup-radios">
+                                        <div>
+                                            <p-radioButton name="radioArea" value="all"
+                                                [(ngModel)]="ingredient"></p-radioButton>
+                                            <label>Todas las áreas</label>
+                                        </div>
+                                        <div>
+                                            <p-radioButton name="radioArea" value="one"
+                                                [(ngModel)]="ingredient"></p-radioButton>
+                                            <label>Elegir</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="formGroup">
+                                    <label for="asunto">&nbsp;</label>
+                                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                        optionLabel="name"></p-dropdown>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="formGroup">
+                                    <label for="asunto">Responsable general</label>
+                                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                        optionLabel="name"></p-dropdown>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div style="text-align: center;">
+                                    <button class="boton-primary">Guardar temporalmente</button>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </p-tabPanel>
+        <p-tabPanel header="Header II">
+            <ng-template pTemplate="header">
+                <i class="pi pi-user"></i>
+                <span class="titulo">Ingreso de compromiso</span>
+            </ng-template>
+            <section class="templateForm">
+                <section class="templateForm-form">
+                    <h2 class="templateForm-form-subtitulo">Ingreso de compromisos</h2>
+                    <section class="templateForm-form-data">
+                        <section class="row">
+                            <div class="formGroup col-md-5 col-sm-6">
+                                <label for="asunto">Asunto</label>
+                                <input pInputText type="text" placeholder="Ingresa el asunto">
+                            </div>
+                            <div class="formGroup col-md-3 col-sm-6">
+                                <label for="asunto">Clase de compromiso</label>
+                                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                    optionLabel="name"></p-dropdown>
+                            </div>
+                            <div class="formGroup col-md-2 col-sm-6">
+                                <label for="asunto">Creado por</label>
+                                <input pInputText type="text" class="input-info" disabled value="Nombres y Apellidos">
+                            </div>
+                            <div class="formGroup col-md-2 col-sm-6">
+                                <label for="asunto">Creado por</label>
+                                <input pInputText type="text" class="input-info" disabled value="DD/MM/AA - HH:MM:SS">
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section class="templateForm-form">
+                    <h2 class="templateForm-form-subtitulo">Datos de la sesión / Reunión</h2>
+                    <section class="templateForm-form-data">
+                        <section class="row">
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Fecha</label>
+                                    <p-calendar [showIcon]="true" dateFormat="dd/mm/yy"
+                                        [readonlyInput]="true"></p-calendar>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Anexo</label>
+                                    <button class="boton-secundary"><i class="fa-solid fa-file"></i>Elegir
+                                        archivos</button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="formGroup">
+                                    <label for="asunto">Nombre del archivo</label>
+                                    <input pInputText type="text" disabled
+                                        value="Documento anexo para la reunión.pdf (210k)">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="formGroup">
+                                    <label for="asunto">Número de acta</label>
+                                    <input pInputText type="text" placeholder="Ingresa el N° de acta">
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </section>
+                        <section class="row formMain-row">
+                            <div class="col-3">
+                                <div class="formGroup">
+                                    <label for="asunto">Área</label>
+                                    <div class="formGroup-radios">
+                                        <div>
+                                            <p-radioButton name="radioArea" value="all"
+                                                [(ngModel)]="ingredient"></p-radioButton>
+                                            <label>Todas las áreas</label>
+                                        </div>
+                                        <div>
+                                            <p-radioButton name="radioArea" value="one"
+                                                [(ngModel)]="ingredient"></p-radioButton>
+                                            <label>Elegir</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="formGroup">
+                                    <label for="asunto">&nbsp;</label>
+                                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                        optionLabel="name"></p-dropdown>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="formGroup">
+                                    <label for="asunto">Responsable general</label>
+                                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionValue="code"
+                                        optionLabel="name"></p-dropdown>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div style="text-align: center;">
+                                    <button class="boton-primary">Guardar temporalmente</button>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section class="templateForm-form">
+                    <h2 class="templateForm-form-subtitulo">
+                        Tareas / Planes de acción
+                        <button class="boton-secundary"><i class="fa-regular fa-paste"></i>Insertar tarea</button>
+                    </h2>
+                    <section class="templateForm-form-tabla">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 25px;"><input type="checkbox"></th>
+                                    <th style="width: 100px;">Acciones<i class="fa-solid fa-sort"></i></th>
+                                    <th style="width: 50px;">Cód<i class="fa-solid fa-sort"></i></th>
+                                    <th style="width: 80px;">Prioridad<i class="fa-solid fa-sort"></i></th>
+                                    <th>Descripción<i class="fa-solid fa-sort"></i></th>
+                                    <th>Responsable<i class="fa-solid fa-sort"></i></th>
+                                    <th>F. compromiso<i class="fa-solid fa-sort"></i></th>
+                                    <th>Asignado por<i class="fa-solid fa-sort"></i></th>
+                                    <th>F. Creación<i class="fa-solid fa-sort"></i></th>
+                                    <th>H. Limite<i class="fa-solid fa-sort"></i></th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                    <th><input type="text" placeholder="Buscar"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <i class="fa-solid fa-pen"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </td>
+                                    <td>860</td>
+                                    <td><span class="estado estado-media">Media</span></td>
+                                    <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables
+                                    </td>
+                                    <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                    <td>2023-10-06 15:35</td>
+                                    <td>Nelly Colmenares</td>
+                                    <td>2023-10-05 18:07</td>
+                                    <td>2023-10-05 18:07</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <i class="fa-solid fa-pen"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </td>
+                                    <td>860</td>
+                                    <td><span class="estado estado-baja">Baja</span></td>
+                                    <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables
+                                    </td>
+                                    <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                    <td>2023-10-06 15:35</td>
+                                    <td>Nelly Colmenares</td>
+                                    <td>2023-10-05 18:07</td>
+                                    <td>2023-10-05 18:07</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <i class="fa-solid fa-pen"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </td>
+                                    <td>860</td>
+                                    <td><span class="estado estado-alta">Alta</span></td>
+                                    <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables
+                                    </td>
+                                    <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                    <td>2023-10-06 15:35</td>
+                                    <td>Nelly Colmenares</td>
+                                    <td>2023-10-05 18:07</td>
+                                    <td>2023-10-05 18:07</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <i class="fa-solid fa-pen"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </td>
+                                    <td>860</td>
+                                    <td><span class="estado estado-media">Media</span></td>
+                                    <td>Ejecucion de la actividad uno que incluye definicion de estrategia y entregables
+                                    </td>
+                                    <td>Jefe de Produccion y Recaudo - Patricia Villanueva</td>
+                                    <td>2023-10-06 15:35</td>
+                                    <td>Nelly Colmenares</td>
+                                    <td>2023-10-05 18:07</td>
+                                    <td>2023-10-05 18:07</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </section>
+        </p-tabPanel>
+    </p-tabView>
+</section>

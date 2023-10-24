@@ -1,0 +1,26 @@
+.layout-main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas:
+        'menu header'
+        'menu main';
+
+    &-header {
+        grid-area: header;
+    }
+
+    &-aside {
+        grid-area: menu;
+        background-color: green;
+        min-height: 100vh;
+    }
+
+    &-main {
+        grid-area: main;
+        background-color: #fff;
+        min-height: calc(100vh - 50px);
+        padding: 1rem 1rem;
+    }
+}
