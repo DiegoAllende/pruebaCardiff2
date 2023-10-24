@@ -1,16 +1,15 @@
-<section class="gestioDia">
-    <h1>Gestión del Día a Día</h1>
+<section class="formPri">
+    <h1 class="formPri-title">Gestión del Día a Día</h1>
 
-    <p-tabView styleClass="tabview-custom">
+    <p-tabView>
         <p-tabPanel>
             <ng-template pTemplate="header">
-                <i class="pi pi-user"></i>
-                <span class="titulo">Gestión de compromisos</span>
+                <span class="formPri-titleTab"><i class="fa-solid fa-note-sticky"></i>Gestión de compromisos</span>
             </ng-template>
-            <section class="templateForm">
-                <section class="templateForm-form">
-                    <h2 class="templateForm-form-subtitulo">Gestión de compromisos</h2>
-                    <section class="templateForm-form-data">
+            <section class="formPri-templateForm">
+                <section class="formPri-templateForm-item">
+                    <h2 class="formPri-templateForm-item-subtitle">Gestión de compromisos</h2>
+                    <section class="formPri-templateForm-item-data">
                         <section class="row">
                             <div class="formGroup col-md-5 col-sm-6">
                                 <label for="asunto">Asunto</label>
@@ -32,9 +31,9 @@
                         </section>
                     </section>
                 </section>
-                <section class="templateForm-form">
-                    <h2 class="templateForm-form-subtitulo">Datos de la sesión / Reunión</h2>
-                    <section class="templateForm-form-data">
+                <section class="formPri-templateForm-item">
+                    <h2 class="formPri-templateForm-item-subtitle">Datos de la sesión / Reunión</h2>
+                    <section class="formPri-templateForm-item-data">
                         <section class="row">
                             <div class="col-2">
                                 <div class="formGroup">
@@ -65,7 +64,7 @@
                             </div>
                             <div class="col-2"></div>
                         </section>
-                        <section class="row formMain-row">
+                        <section class="row">
                             <div class="col-3">
                                 <div class="formGroup">
                                     <label for="asunto">Área</label>
@@ -107,15 +106,14 @@
                 </section>
             </section>
         </p-tabPanel>
-        <p-tabPanel header="Header II">
+        <p-tabPanel>
             <ng-template pTemplate="header">
-                <i class="pi pi-user"></i>
-                <span class="titulo">Ingreso de compromiso</span>
+                <span class="formPri-titleTab"><i class="fa-solid fa-table-list"></i>Ingreso de compromiso</span>
             </ng-template>
-            <section class="templateForm">
-                <section class="templateForm-form">
-                    <h2 class="templateForm-form-subtitulo">Ingreso de compromisos</h2>
-                    <section class="templateForm-form-data">
+            <section class="formPri-templateForm">
+                <section class="formPri-templateForm-item">
+                    <h2 class="formPri-templateForm-item-subtitle">Gestión de compromisos</h2>
+                    <section class="formPri-templateForm-item-data">
                         <section class="row">
                             <div class="formGroup col-md-5 col-sm-6">
                                 <label for="asunto">Asunto</label>
@@ -137,9 +135,9 @@
                         </section>
                     </section>
                 </section>
-                <section class="templateForm-form">
-                    <h2 class="templateForm-form-subtitulo">Datos de la sesión / Reunión</h2>
-                    <section class="templateForm-form-data">
+                <section class="formPri-templateForm-item">
+                    <h2 class="formPri-templateForm-item-subtitle">Datos de la sesión / Reunión</h2>
+                    <section class="formPri-templateForm-item-data">
                         <section class="row">
                             <div class="col-2">
                                 <div class="formGroup">
@@ -170,7 +168,7 @@
                             </div>
                             <div class="col-2"></div>
                         </section>
-                        <section class="row formMain-row">
+                        <section class="row">
                             <div class="col-3">
                                 <div class="formGroup">
                                     <label for="asunto">Área</label>
@@ -210,12 +208,12 @@
                         </section>
                     </section>
                 </section>
-                <section class="templateForm-form">
-                    <h2 class="templateForm-form-subtitulo">
+                <section class="formPri-templateForm-item">
+                    <h2 class="formPri-templateForm-item-subtitle">
                         Tareas / Planes de acción
                         <button class="boton-secundary"><i class="fa-regular fa-paste"></i>Insertar tarea</button>
                     </h2>
-                    <section class="templateForm-form-tabla">
+                    <section class="formPri-templateForm-item-tabla">
                         <table>
                             <thead>
                                 <tr>

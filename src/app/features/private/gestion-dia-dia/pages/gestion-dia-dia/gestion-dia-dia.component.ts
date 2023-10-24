@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TabViewModule } from 'primeng/tabview';
-import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
-import { CalendarModule } from 'primeng/calendar';
-import { RadioButtonModule } from 'primeng/radiobutton';
+import { PrimeNgModule } from 'src/app/shared/prime-ng/prime-ng.module';
 
 interface City {
   name: string;
@@ -15,7 +11,7 @@ interface City {
 @Component({
   selector: 'app-gestion-dia-dia',
   standalone: true,
-  imports: [CommonModule, CalendarModule, DropdownModule, FormsModule, InputTextModule, RadioButtonModule, TabViewModule],
+  imports: [CommonModule, FormsModule, PrimeNgModule],
   templateUrl: './gestion-dia-dia.component.html',
   styleUrls: ['./gestion-dia-dia.component.scss']
 })

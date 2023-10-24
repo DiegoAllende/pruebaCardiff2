@@ -1,0 +1,25 @@
+.boton-primary {
+  font-size: 12px;
+  background-color: var(--color-primary2);
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-secundary {
+  font-size: 12px;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--color-primary3);
+  color: var(--color-primary3);
+  cursor: pointer;
+
+  i {
+    margin-right: 5px;
+    color: var(--color-primary1);
+  }
+}
